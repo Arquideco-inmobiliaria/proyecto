@@ -28,7 +28,7 @@ def registrar():
     return render_template('registrar.html')
 
 @app.route('/reg', methods=['POST'])
-def reg():
+def re():
     _nombre=request.form['usua_nombre']
     _correo=request.form['clie_correo']
     _celular=request.form['clie_telefono']
