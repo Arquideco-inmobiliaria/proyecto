@@ -81,3 +81,9 @@ table.table .form-control.error {
 table.table td .add {
     display: none;
 }
+.datos{
+    display: flex;
+}
+thead{
+    display: flex;
+}

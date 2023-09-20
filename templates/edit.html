@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Registro</title>
+    <link rel="stylesheet" href="{{url_for("static", filename="css/editar.css")}}">
+    
+</head>
+<body>
+
+    
+<!-- pie de pagina  -->
+<div class="header">
+    <div class="img-text">
+        <a href="/"><img src="../static/img/logo.jpg" alt="" class="img1"></a>
+        <span>Arquideco Inmobiliaria</span>
+    </div>
+     <!-- Botones menu navegación -->
+     <div class="botones" id="bot">
+        <button><a href="/cat">CATALOGO</a></button>
+        <button><a href="/ini">LOG IN</a></button>
+        <button><a href="/regi">SING IN</a></button>
+    </div>
+
+    <div class="iconos">
+        <i class="fa-solid fa-user"></i>
+    </div>
+  </div>
+  
+
+    <div class="container">
+    <h1>Editar Registro</h1>
+    
+    <div class="formulario">
+        {% for usuario in usuario %}
+            
+        <form action="/update" method="post" enctype="multipart/form-data">
+            <input type="text" value="{{usuario[0]}}" name="id" id="id">
+            <label for="nombr_completo">Nombre Completo:</label>
+            <input type="text" id="nameusu" name="nameusu" value="{{ usuario[1] }}">
+
+            <label for="emai">Correo Electrónico:</label>
+            <input type="email" id="emailusu" name="emailusu" value="{{usuario[2]}}">
+
+            <label for="fechaNacimien">fechaNacimiento:</label>
+            <input type="date" id="cumusu" name="cumusu" value="{{ usuario[3] }}">
+
+            <label for="telefon">telefono:</label>
+            <input type="text" id="celusu" name="celusu" value="{{ usuario[4] }}">
+
+            <label for="password1">Documento:</label>
+            <input type="text  " id="docusu" name="docusu" value="{{ usuario[5] }}">
+
+            <label for="passwor">nueva contraseña:</label>
+            <input type="password" id="passusu" name="passusu" value="{{ usuario[6] }}">
+            <label for="passwor">nueva contraseña:</label>
+            <input type="password" id="passusu2" name="passusu2" value="{{ usuario[7] }}">
+            <label for="password1">Rol:</label>
+            <input type="text  " id="rol" name="rol" value="{{ usuario[8] }}">
+            <input type="submit" value="Guardar Cambios">
+            {% endfor %}
+            
+
+            
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

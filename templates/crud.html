@@ -30,50 +30,36 @@
                 <table class="table table-bordered">
                     <thead>
                         <tr>
+                            <th>id</th>
                             <th>Nombre Completo</th>
                             <th>Correo</th>
                             <th>Fecha de Nacimiento</th>
                             <th>Numero de celular</th>
                             <th>Documento</th>
+                            <th>rol</th>
+                            <th>acciones</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Romina Poderosa</td>
-                            <td>romigmail.com</td>
-                            <td>12/45/20</td>
-                            <td>13234131</td>
-                            <td>435555</td>
+                        
+                        {% for usuario in usuario %}
+                        <tr class="datos">
+                            <td>{{usuario[0]}}</td>
+                            <td>{{usuario[1]}}</td>
+                            <td>{{usuario[2]}}</td>
+                            <td>{{usuario[3]}}</td>
+                            <td>{{usuario[4]}}</td>
+                            <td>{{usuario[5]}}</td>
+                            <td>{{usuario[6]}}</td>
                             <td>
-                                <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                                <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
+                                <a href="/edit/{{usuario[0]}}" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
+                                <a href="/destroy/{{usuario[0]}}" class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
                             </td>
                         </tr>
-                        <tr>
-                            <td>Camilo Suarez</td>
-                            <td>kmimilo12gmail.com</td>
-                            <td>11/45/20</td>
-                            <td>132731</td>
-                            <td>456555</td>
-                            <td>
-                                <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                                <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Fran Wilson</td>
-                            <td>romigmail.com</td>
-                            <td>17/00/10</td>
-                            <td>3008934131</td>
-                            <td>9005555</td>
-                            <td>
-                                <a class="add" title="Add" data-toggle="tooltip"><i class="material-icons">&#xE03B;</i></a>
-                                <a class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                                <a class="delete" title="Delete" data-toggle="tooltip"><i class="material-icons">&#xE872;</i></a>
-                            </td>
-                        </tr>      
+                        {% endfor %}
+                            
+                        
+                           
                     </tbody>
                 </table>
             </div>

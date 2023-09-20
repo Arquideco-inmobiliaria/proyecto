@@ -30,8 +30,8 @@ correo varchar (50),
 fechaNacimiento date,
 telefono int (20),
 Documento int (20),
-password1 varchar(30),
-password2 varchar(30),
+password1 char(102),
+password2 char(102),
 fk_IdRol int(11) unsigned not null, foreign key (fk_IdRol) references Rol(IdRol),
 fk_IdAgenda  int(11) unsigned null, foreign key (fk_IdAgenda ) references Detalle(IdDetalle)
 -- id rol

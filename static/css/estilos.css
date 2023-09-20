@@ -121,6 +121,65 @@ nav{
         scroll-snap-type: x mandatory;
 }
 
+/* ESTILOS VENTANA MODAL */
+.ventana{
+    background-color: rgba(5, 5, 37, 0.5);
+    position: absolute;
+    width: 311px;
+    height: 120px;
+    top: 100px;
+    left: 50px;
+    right: 33px;
+    font-size: 10px;
+    border-radius: 10%;
+    
+}
+
+.ventana h1{
+    color: white;
+    padding: 15px;
+    top: 22px;
+    text-align: center;
+    font-size: 17px;
+
+}
+
+.vent button{
+    background-color: #001F6D;
+    color: #001F6D;
+    align-items: center;
+    margin: auto;
+    height: 45%;
+    width: 60%;
+    border-radius: 25px;
+    border: none;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-right: 5%;
+}
+
+.vent button a{
+    color: white;
+    border-radius: 30%;
+    top: 250px;
+   
+}
+
+.vent{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.vent i{
+    font-size: 320%;
+    margin-left: 10%;
+    padding: 5%;
+    right: 20px;
+    left: 10%;
+    color: white;
+}
+
 /* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
@@ -242,12 +301,15 @@ text-align: left;
     
 /* pie de pagina */
 .resp {
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     background-color: #071125;
     color: #fff;
     padding: 10px 50px;
+}
+.resp p{
+    color: white;
 }
 .img1{
     width: 10%;
@@ -285,17 +347,13 @@ text-align: left;
 }
 
 .botones{
-    display: none;
+    display: block;
 }
 
 .logo img{
     margin-top: 15px;
     margin-left: 20px;
   
-}
-
-.resp{
-    display: block;
 }
 
 .carrusel{
@@ -324,15 +382,10 @@ user-select: none;
 }
 
 
-.img1{
-width: 100%;
-flex: none;
-scroll-snap-align: center;
-}
 
 .servi{
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction:row;
     margin-top: 30px;
     margin-right: 400px;
     
@@ -355,6 +408,7 @@ font-weight: bold;
 }
 
 .papa{
+    display: flex;
     flex-direction: row;
 
 }
@@ -366,7 +420,7 @@ font-weight: 400;
 line-height: 24px;
 letter-spacing: 0em;
 color:
-#001F6D;
+#096d00;
 margin: 12px;
 margin-left: -0.1px;
 margin-top: -30px;
@@ -381,7 +435,7 @@ width: 250px;
 }
 
 .imgdiv1{
-    margin-right: 20px;
+    margin-right: 50px;
     width: 145px;
 }
 
@@ -390,13 +444,65 @@ width: 250px;
 /* Podemos observar que son los mismos estilos pero al sentido contrario */
 
 .servidos{
-    display: none;
+    display: block;
     flex-direction: row-reverse;
     align-items: center;
     margin-top: 30px;
 }
 
+.carrusel{
+    width: 23px;
+    height: 100px;
+    margin:0;
+    position: relative;
+    margin: auto;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.img1 img{
+    height: 100%;
+    width: 20%;
+}
+
+/* ESTILOS VENTANA MODAL */
+.ventana{
+background-color: rgba(5, 5, 37, 0.5);
+position: absolute;
+width: 711px;
+height: 20%;
+top: 100px;
+left: 30%;
+right: 33px;
+font-size: 10px;
+border-radius: 15%;
+align-items: center;
+justify-content: center;
+}
+.vent button{
+    background-color: #001F6D;
+    color: #001F6D;
+    align-items: center;
+    margin: auto;
+    height: 45%;
+    width: 20%;
+    border-radius: 25px;
+    border: none;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-right: 25%;
+    justify-content: center;
+}
 
 
+.vent i{
+    font-size: 420%;
+    margin-left: 10%;
+    padding: 5%;
+    right: 20px;
+    left: 10%;
+    color: white;
+}
 
 }

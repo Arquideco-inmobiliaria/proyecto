@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inmobiliaria Arquideco</title>
     <!-- Enlace de Hoja de estilos -->
-    <link rel="stylesheet" href="{{url_for("static", filename="css/estilos.css")}}">
+ <link rel="stylesheet" href="{{url_for("static", filename="../../static/css/estilos.css")}}"> 
 
     <script src="https://kit.fontawesome.com/6131ecdde6.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -32,7 +33,7 @@
         </div>
 
         <div class="resp">
-            <span>Arquideco Inmobiliaria</span>
+        <p>Arquideco Inmobiliaria</p>
         <div class="buttons">
             <button>Registrar</button>
             <button>Rniciar Sesion </button>
@@ -61,8 +62,11 @@
 
     <div class="img1">
         <div class="ventana">
-            <h1>Encuentra tu inmueble actualizado</h1>
-            <button><a href="">Ver Inmuebles</a></button>
+            <h1>Encuentra tu inmueble ideal</h1>
+            <div class="vent">
+                <i class='bx bx-search-alt-2'></i>
+                <button><a href="">Ver inmuebles</a></button>
+            </div>
         </div>
       <img src="../static/img/images 1.png" style="width:100%">
       <div class="text"></div>
