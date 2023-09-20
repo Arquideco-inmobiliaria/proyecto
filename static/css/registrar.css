@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("../img/fondonais.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Esto evita que la imagen de fondo se desplace con el contenido */
+    font-family: sans-serif ;
+}
+
+    
+    
+    .loginbox{
+    width: 450px;
+    height: 780px;
+    background-color: #071125;
+    color: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing:border-box ;
+    padding: 70px 30px;
+    border-radius: 30px;
+    box-shadow: 5px 5px  rgba(255, 255, 255, 0.5); 
+    margin-top: 60px;
+    
+    
+    }
+    .avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50%  - 50px);
+    
+    
+    
+    }
+    
+    .uwu{
+        margin: 0%;
+        padding: 10px 10px 20px;
+        text-align: center;
+        font-size: 22px;
+        
+    
+    }
+    .loginbox p{
+        margin:  0;
+        padding: 0;
+        font-weight: bold;
+        color: #ffffff;
+        position: relative;
+        left: 20px;
+    
+    
+    }  
+    
+    .loginbox input{
+    
+    width: 320px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    
+    position: relative;
+    left: 20px;
+    }
+    .s{
+        color: #df0000;
+    }
+    
+    .y{
+        border: none;
+        background: white;
+        border-radius: 20px;
+        height: 40px;
+        font-size: 16px;
+        width: 120px;
+        
+    }
+    p{
+        color: aliceblue;
+    }
+    .button{
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        height: 40px;
+        width: 100%;
+        align-items: center;
+        background: #2584FB ;
+        color: #fff;
+        font-size: 18px;
+        position: relative;
+        top: 100px;
+    
+    }
+    .r{
+    
+        text-align: center;
+        color: rgb(128, 128, 128);
+        position: relative;
+        top: 100px;
+        text-decoration: none;
+        font-size: 12px;
+        line-height: 20px;
+        
+    }
+    .button:hover{
+     cursor: pointer;
+     color: #000;   
+     box-shadow: 3px 3px  rgba(34, 32, 32, 0.5); 
+    
+    }
+    .r:hover
+    {
+        cursor: pointer;
+        
+        color: #F92B2B ;     
+    }
+     
+    .f1{
+        height: 410px;
+        width: 45%;
+        padding: 10px;
+        
+       
+        
+        }
+    
+    .uwuwu {
+    
+        height: 40px;
+        width: 100%;
+        font-size: 14px;
+        border-radius: 10px;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-block-end: 13px;
+    }
+    
+    
+    
+    
+    

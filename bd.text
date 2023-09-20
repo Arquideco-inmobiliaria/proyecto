@@ -1,0 +1,116 @@
+drop database arquideco;
+create database arquideco;
+use arquideco;
+
+create table IF NOT EXISTS Rol(
+idRol Int unsigned primary key auto_increment,
+tipoRol varchar (50)
+);
+
+
+create table Agenda (
+IdAgenda Int unsigned primary key auto_increment,
+fechaInicio int (50) not null,
+fechaFin int (50) not null
+);
+
+create table Detalle (
+IdDetalle Int unsigned primary key auto_increment,
+dia int (30) not null,
+horaInicio varchar (30) not null,
+horaFin  varchar (30) not null,
+fk_IdAgenda  int(11) unsigned not null, foreign key (fk_IdAgenda) references Agenda(IdAgenda)
+
+);
+
+create table Usuario(
+IdUsuario Int(5) unsigned primary key auto_increment,
+nombre varchar (20) not null,
+apellido varchar (20)  null,
+correo varchar (50) not null,
+fechaNacimiento date null,
+edad int  null,
+telefono bigint not null,
+direccion varchar (50)  null,
+tipoGenero double  null,
+tipoDocumento int (20) null,
+password varchar(30) not null,
+password2 varchar(30) not null,
+fk_IdRol int(11) unsigned not null, foreign key (fk_IdRol) references Rol(IdRol),
+fk_IdAgenda  int(11) unsigned null, foreign key (fk_IdAgenda ) references Detalle(IdDetalle)
+-- id rol
+);
+
+
+
+
+
+
+create table IF NOT EXISTS Inmueble(
+IdInmueble Int unsigned primary key auto_increment,
+descpricion varchar(200) not null,
+habitaciones int (50) not null,
+baños int not null,
+precio int not null,
+estrato int  (30) not null,
+ubicacion varchar (50) not null,
+TipoInmueble varchar (50) not null
+);
+
+
+
+   
+   
+
+create table localidad (
+IdLocalidad Int unsigned primary key auto_increment,
+localidad int (20) not null,
+ fk_IdUsuario int(11) unsigned not null, foreign key (fk_IdUsuario) references Usuario (IdUsuario)
+-- id Usuario
+);
+
+
+
+
+
+create table Categoria(
+IdCategoria Int unsigned primary key auto_increment,
+nombreCategoria varchar (50) not null,
+Descripcion varchar (200) not  null,
+ fk_IdInmueble int(11) unsigned not null, foreign key (fk_IdInmueble) references Inmueble(IdInmueble)
+-- id inmueble
+);
+
+
+create table Cita(
+IdCita Int unsigned primary key auto_increment,
+
+ fk_IdUsuario int(11) unsigned not null, foreign key (fk_IdUsuario) references Usuario (IdUsuario),
+-- id Usuario
+ fk_IdInmueble int(11) unsigned not null, foreign key (fk_IdInmueble) references Inmueble(IdInmueble)
+-- id inmueble
+);
+
+
+
+
+create table Barrio(
+IdBarrio Int unsigned primary key auto_increment,
+nombreBarrio varchar(20) ,
+ fk_IdLocalidad int(11) unsigned not null, foreign key (fk_IdLocalidad) references Localidad (IdLocalidad),
+  fk_IdInmueble int(11) unsigned not null, foreign key (fk_IdInmueble) references Inmueble(IdInmueble)
+-- id inmueble
+
+);
+
+
+
+create table  detalleLocalidad (
+IdDetalleLocalidad Int unsigned primary key auto_increment,
+ fk_IdLocalidad int(11) unsigned not null, foreign key (fk_IdLocalidad) references Localidad (IdLocalidad),
+  fk_IdUsuario int(11) unsigned not null, foreign key (fk_IdUsuario) references Usuario (IdUsuario)
+-- id Usuario
+);
+INSERT INTO `rol` (`idRol`, `tipoRol`) VALUES (NULL, 'admin');
+INSERT INTO `rol` (`idRol`, `tipoRol`) VALUES (NULL, 'user');
+INSERT INTO `rol` (`idRol`, `tipoRol`) VALUES (NULL, 'intermediario');

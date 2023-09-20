@@ -1,0 +1,402 @@
+:root{
+    --azul: #071125;
+    --azulclaro: #48D6ED;
+    --azuloscuro: #337AB7;
+    --azulnegro: #303342;
+    --negro: #333333;
+    --negro2: #000;
+    --gris: #B2B3B3;
+    --fondo: #FFFEFC;
+    --verdeazul: #157A8A;
+    --Magenta: #9C2759;
+    --blanco: #fff;
+}
+
+*{
+    margin:0;
+}
+/* Cuerpo con sus estilos principales */
+body{
+    font-size: 14px;
+    height: 100vh;
+    font-family: 'Inria', sans-serif;
+}
+
+nav{
+/* menu */
+    display: flex;
+    position:fixed;
+    flex-direction: row;
+    font-family: 'Inria', sans-serif;
+    z-index: 100;
+    width: 100%;  
+    background: var(--azul);
+}
+
+/* Menu hamburguesa */
+.menu{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .resp{
+        display: none;
+    }
+/* Contenido menu hamburguesa */
+
+.contenido{
+    width: 60%;
+    height: 100vh;
+    display: none;
+    margin-right: -190px;
+    margin-top: 20px;
+    position: relative;
+    line-height: 30px;
+    
+    
+
+}
+.contenido a{
+    color: white;   
+    gap: 2rem;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.contenido p{
+    color: white;
+    text-align: end;
+    position: absolute;
+    margin-top: 598px;
+
+}
+
+
+ /* Tamaño y color del logo */
+ .menu button{
+    background-color: transparent;
+    border: 0;
+ }
+.menu i{
+        color: var(--blanco);
+        font-size: 2rem;
+    }
+
+/* Caja principal de botones menu de navegación */
+.botones{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    margin: 12px;
+    margin-top: 20px;
+}
+
+/* Caracteristicas de cada Botón */
+.botones button{
+    border-radius: 50px;
+    width: 85px;
+    height: 30px;
+    margin-right: 17px;
+}
+
+/* Imgene logo */
+.logo img{
+    margin-top: 15px;
+    margin-left: -20px;
+  
+}
+    
+
+/* Estilos Carrusel */
+
+.carrusel{
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+
+  .img1{
+width: 100%;
+flex: none;
+scroll-snap-align: center;
+  }
+
+
+/* Estilos apartado Servicios */
+.servi{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.titulo{
+font-family: 'Inria', sans-serif;
+font-size: 25px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center;
+color:
+#001F6D;
+}
+
+.servi1{
+    margin-left: 20px;
+}
+
+.servi1 h1{
+font-family: 'Inria', sans-serif;
+font-size: 19px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+color:
+#001F6D;
+margin: 12px;
+margin-left: -0.1px;
+margin-top: -30px;
+}
+
+.servi1 p{
+    text-align: justify;
+font-size: 12px;
+font-weight: 400;
+line-height: 14px;
+letter-spacing: 0em;
+text-align: left;
+}
+
+.imgdiv1{
+    margin-right: 20px;
+}
+
+
+/* Servicios Dos */
+/* Podemos observar que son los mismos estilos pero al sentido contrario */
+
+.servidos{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.servi2{
+    margin-right: 19px;
+    margin-top: 20px;
+}
+
+.servi2 h1{
+    text-align: end;
+    font-family: 'Inria', sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color:
+    #001F6D;
+    margin: 12px;
+    margin-left: -0.1px;
+    margin-top: -30px;
+    }
+
+    .servi2 p{
+        text-align: end;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    }
+    
+    .imgdiv2{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    /*Resolución notebooks*/
+@media screen and (min-width: 1024px){
+    
+/* pie de pagina */
+.resp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #071125;
+    color: #fff;
+    padding: 10px 50px;
+}
+.img1{
+    width: 10%;
+    height: 10%;
+}
+.img-text {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.buttons {
+    text-align: right;
+    margin-left: 40%;
+
+    
+}
+
+.buttons button {
+    padding: 10px 20px;
+    background-color: #3733FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+.iconos{
+    margin-right: 50px;
+}
+
+.menu{
+    display:none;
+}
+
+.botones{
+    display: none;
+}
+
+.logo img{
+    margin-top: 15px;
+    margin-left: 20px;
+  
+}
+
+.resp{
+    display: block;
+}
+
+.carrusel{
+    max-width: 1500px;
+    position: relative;
+    margin: auto;
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+user-select: none;
+}
+
+
+.img1{
+width: 100%;
+flex: none;
+scroll-snap-align: center;
+}
+
+.servi{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 30px;
+    margin-right: 400px;
+    
+}
+
+.titulo{
+font-family: 'Inria', sans-serif;
+font-size: 35px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+text-align: center;
+color:
+#001F6D;
+font-weight: bold;
+}
+
+.servi1{
+    margin-left: 80px;
+}
+
+.papa{
+    flex-direction: row;
+
+}
+
+.servi1 h1{
+font-family: 'Inria', sans-serif;
+font-size: 19px;
+font-weight: 400;
+line-height: 24px;
+letter-spacing: 0em;
+color:
+#001F6D;
+margin: 12px;
+margin-left: -0.1px;
+margin-top: -30px;
+}
+
+.servi1 p{
+text-align:justify;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 0em;
+width: 250px;
+}
+
+.imgdiv1{
+    margin-right: 20px;
+    width: 145px;
+}
+
+
+/* Servicios Dos */
+/* Podemos observar que son los mismos estilos pero al sentido contrario */
+
+.servidos{
+    display: none;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 30px;
+}
+
+
+
+
+}

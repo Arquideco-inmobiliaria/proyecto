@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for("static", filename="css/registrar.css")}}">
+    <link rel="icon" href="../static/img/logo1.png">
+    <title>REGISTRATE</title>
+</head>
+
+<body>
+    <form  method="POST" action="/reci" enctype="multipart/form-data">
+        <div class="loginbox">
+            <a href="../views/index.html"> <img src="../static/img/logo1.png" class="avatar"></a>
+            <h2 class="uwu">registrate</h2>
+            <div class="f1">
+                <p  class="s">Nombre Completo</p>
+                <input class="y" type="text" id="nameusu" name="nameusu" placeholder="ingresa tu usuario">
+
+                <p class="s">Correo Electronico</p>
+                <input class="y" type="email" id="emailusu" name="emailusu" placeholder="ingresa tu correo">
+
+                <p class="s">Fecha de Nacimiento</p>
+                <input type="date" name="cumusu" id="cumusu" placeholder="ingresa tu fecha de cum">
+
+                </select>
+                <p class="s" class="d">Numero Celular</p>
+                <input type="tel" class="y" id="celusu" name="celusu" placeholder="ingresa tu numero de telefono">
+
+                <p class="s" class="d">Documento</p>
+                <input type="tel" class="y" id="docusu" name="docusu" placeholder="ingresa tu documento">
+
+                <p class="s">Contraseña </p>
+                <input class="y" type="password" id="passusu" name="passusu" placeholder="ingresa tu contraseña">
+
+                <p class="s">Verifica Contraseña </p>
+                <input class="y" type="password" id="passusu2" name="passusu2" placeholder="ingresa tu contraseña">
+
+                
+                <input class="button" type="submit" id="registrar" name="registrar" value="registrar">
+
+            </div>
+
+            <center> <a class="r" href="../views/login.html">ya tienes una cuenta? inicia sesion </a></center>
+
+        </div>
+
+    </form>
+</body>
+
+</html>

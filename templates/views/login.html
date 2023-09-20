@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for("static", filename="css/login.css")}}">
+    <link rel="icon" href="../static/im/logo1.png">
+    <title>INICIA SESION</title>
+</head>
+<body> 
+
+    <div class="loginbox" >
+        <form action="/login" method="POST">
+       <a href="../views/index.html"> <img src="../static/img/logo1.png" class="avatar"></a>
+        <h2 class="uwu">inicia sesion</h2>
+
+            <p>Usuario</p>
+            <input class="y" type="text" name="usuaname" placeholder="ingresa tu usuario"> 
+            <p>Contraseña</p>
+            <input class="y" type="password" name="usupass" placeholder="ingresa tu contraseña">
+
+            <input class="button" type="submit" name="ingresar" value="ingresar">
+            
+            <center><a class="r">olvidaste tu contraseña?</a>
+            <br>
+            <a class="r" href="../views/registrar.html">no tienes una cuenta?</a></center>
+
+
+
+        </form>
+        
+    </div >
+    
+    
+</body>
+</html>
