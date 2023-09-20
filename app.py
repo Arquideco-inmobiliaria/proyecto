@@ -41,22 +41,27 @@ def reci():
     
 #los guarda en la variable datos
     datos = (_nombre, _correo, _cumple, _celular, _documento, _pass, _pass2)
-#ejecuta la sentencia
-    sql = "INSERT INTO `usuario` (`IdUsuario`, `nombre_completo`, `correo`, `fechaNacimiento`, `telefono`, `Documento`, `password1`, `password2`, `fk_IdRol`,`fk_IdAgenda`) VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, 2202, NULL);"
+#verirfica que las contraseñas sean iguales
+    if _pass==_pass2:
+#ejecuta la sentencia       
+       sql = "INSERT INTO `usuario` (`IdUsuario`, `nombre_completo`, `correo`, `fechaNacimiento`, `telefono`, `Documento`, `password1`, `password2`, `fk_IdRol`,`fk_IdAgenda`) VALUES (NULL, %s, %s, %s, %s, %s, %s, %s, 2202, NULL);"
 
 #hace la verificacion de coneccion y regresa a la vista inmueble
-    try:
-        conn = mysql.connect()
-        cursor = conn.cursor()
-        cursor.execute(sql, datos)  # Corregido aquí: pasar los datos al método execute
-        conn.commit()
-    except Exception as e:
-        return f"Error en la inserción: {str(e)}"
-    finally: 
+       try:
+           conn = mysql.connect()
+           cursor = conn.cursor()
+           cursor.execute(sql, datos)  # Corregido aquí: pasar los datos al método execute
+           conn.commit()
+       except Exception as e:
+            return f"Error en la inserción: {str(e)}"
+       finally: 
         cursor.close()
         conn.close()
     
-    return render_template("inmueble.html")
+        return render_template("inmueble.html")
+    else:
+        return render_template("registrar.html")
+        
 
 #INICIO DE SESION
 

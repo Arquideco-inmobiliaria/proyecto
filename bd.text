@@ -25,17 +25,13 @@ fk_IdAgenda  int(11) unsigned not null, foreign key (fk_IdAgenda) references Age
 
 create table Usuario(
 IdUsuario Int(5) unsigned primary key auto_increment,
-nombre varchar (20) not null,
-apellido varchar (20)  null,
-correo varchar (50) not null,
-fechaNacimiento date null,
-edad int  null,
-telefono bigint not null,
-direccion varchar (50)  null,
-tipoGenero double  null,
-tipoDocumento int (20) null,
-password varchar(30) not null,
-password2 varchar(30) not null,
+nombre_completo varchar (80),
+correo varchar (50),
+fechaNacimiento date,
+telefono int (20),
+Documento int (20),
+password1 varchar(30),
+password2 varchar(30),
 fk_IdRol int(11) unsigned not null, foreign key (fk_IdRol) references Rol(IdRol),
 fk_IdAgenda  int(11) unsigned null, foreign key (fk_IdAgenda ) references Detalle(IdDetalle)
 -- id rol
@@ -111,6 +107,10 @@ IdDetalleLocalidad Int unsigned primary key auto_increment,
   fk_IdUsuario int(11) unsigned not null, foreign key (fk_IdUsuario) references Usuario (IdUsuario)
 -- id Usuario
 );
-INSERT INTO `rol` (`idRol`, `tipoRol`) VALUES (NULL, 'admin');
-INSERT INTO `rol` (`idRol`, `tipoRol`) VALUES (NULL, 'user');
-INSERT INTO `rol` (`idRol`, `tipoRol`) VALUES (NULL, 'intermediario');
+INSERT INTO `rol` (`idRol`, `tipoRol`) VALUES (1101, 'admin');
+INSERT INTO `rol` (`idRol`, `tipoRol`) VALUES (2202, 'user');
+INSERT INTO `rol` (`idRol`, `tipoRol`) VALUES (3303, 'intermediario');
+
+
+select * from usuario;
+select * from rol;
