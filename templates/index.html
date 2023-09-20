@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inmobiliaria Arquideco</title>
     <!-- Enlace de Hoja de estilos -->
-    <link rel="stylesheet" href="../assets/css/estilos.css">
+    <link rel="stylesheet" href="{{url_for("static", filename="css/estilos.css")}}">
+
     <script src="https://kit.fontawesome.com/6131ecdde6.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
@@ -18,8 +19,8 @@
             <button id="boton"><i class="fa-solid fa-bars"></i></button>
                  <!-- Contenido menu hamburguesa -->
         <div class="contenido" id="menu">
-           <button><a href="../views/registrar.html">REGISTRATE</a></button>
-            <button><a href="../views/login.html">INICIO SESIÓN</a></button>
+           <button><a href="/regi">REGISTRATE</a></button>
+            <button><a href="/ini">INICIO SESIÓN</a></button>
 
            <button> <a href="">NUESTROS SERVICIOS</a></button>
 
@@ -46,12 +47,12 @@
         <!-- Botones menu navegación -->
         <div class="botones" id="bot">
             <button>CATALOGO</button>
-            <button><a href="../views/registrar.html">LOG IN</a></button>
-            <button><a href="../views/login.html">SING IN</a></button>
+            <button><a href="/ini">LOG IN</a></button>
+            <button><a href="/regi">SING IN</a></button>
         </div>
         <!-- Imagen Logo -->
         <div class="logo" id="logo">
-            <img src="../assets/img/descarga.png" alt="">
+            <img src="../static/img/descarga.png" alt="">
         </div>
     </nav>
 
@@ -59,17 +60,21 @@
     <div class="carrusel">
 
     <div class="img1">
-      <img src="../assets/img/images 1.png" style="width:100%">
+        <div class="ventana">
+            <h1>Encuentra tu inmueble actualizado</h1>
+            <button><a href="">Ver Inmuebles</a></button>
+        </div>
+      <img src="../static/img/images 1.png" style="width:100%">
       <div class="text"></div>
     </div>
     
     <div class="img1">
-      <img src="../assets/img/casa11.jpg" style="width:100%">
+      <img src="../static/img/casa11.jpg" style="width:100%">
       <div class="text"></div>
     </div>
     
     <div class="img1">
-      <img src="../assets/img/casa22.jpg" style="width:100%">
+      <img src="../static/img/casa22.jpg" style="width:100%">
       <div class="text"></div>
     </div>
     
@@ -94,7 +99,7 @@
             </p>
         </div>
         <div class="imgdiv1">
-            <img src="../assets/img/casa66.png" alt="">
+            <img src="../static/img/casa66.png" alt="">
         </div>
     </div>
 </div>
@@ -109,7 +114,7 @@
             </p>
         </div>
         <div class="imgdiv2">
-            <img src="../assets/img/casa55.png" alt="">
+            <img src="../static/img/casa55.png" alt="">
         </div>
     </div>
 
@@ -123,10 +128,10 @@
         </p>
     </div>
     <div class="imgdiv1">
-        <img src="../assets/img/casa66.png" alt="">
+        <img src="../static/img/casa66.png" alt="">
     </div>
 </div>
       
 </body>
-<script src="../assets/js/script.js"></script>
+<script src="../static/js/script.js"></script>
 </html>

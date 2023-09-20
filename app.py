@@ -16,15 +16,15 @@ mysql.init_app(app)
 # Rutas para mostrar vistas
 @app.route("/")
 def index():    
-    return render_template("views/index.html")
+    return render_template("index.html")
 
 @app.route("/regi")
 def registrar():
-    return render_template("views/registrar.html")
+    return render_template("registrar.html")
 
 @app.route("/ini")
 def ini():
-    return render_template("views/login.html")
+    return render_template("login.html")
 
 
 #proceso de registro de usuario
@@ -56,7 +56,7 @@ def reci():
         cursor.close()
         conn.close()
     
-    return render_template("views/inmueble.html")
+    return render_template("inmueble.html")
 
 #INICIO DE SESION
 
@@ -67,7 +67,7 @@ def login():
     #verificacion de metodo, sirve para saber si esta haciendo el envio de los datos
         print(request.form["usuaname"])
         print(request.form["usupass"])
-        return render_template("views/login.html")
+        return render_template("login.html")
 
 
 

@@ -4,24 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../assets/css/login.css">
-    <link rel="icon" href="logo1.png">
+    <link rel="stylesheet" href="{{url_for("static", filename="css/login.css")}}">
+    <link rel="icon" href="../static/im/logo1.png">
     <title>INICIA SESION</title>
 </head>
 <body> 
 
     <div class="loginbox" >
-        <form action="validar.php" method="POST">
-       <a href="../views/index.html"> <img src="../assets/img/logo1.png" class="avatar"></a>
+        <form action="/login" method="POST">
+       <a href="../views/index.html"> <img src="../static/img/logo1.png" class="avatar"></a>
         <h2 class="uwu">inicia sesion</h2>
-         <?php 
-        include("db.php");
-        include("conexion.php");
-        ?>
+
             <p>Usuario</p>
-            <input class="y" type="text" name="usua_nombre" placeholder="ingresa tu usuario"> 
+            <input class="y" type="text" name="usuaname" placeholder="ingresa tu usuario"> 
             <p>Contraseña</p>
-            <input class="y" type="password" name="usua_clave" placeholder="ingresa tu contraseña">
+            <input class="y" type="password" name="usupass" placeholder="ingresa tu contraseña">
+
             <input class="button" type="submit" name="ingresar" value="ingresar">
             
             <center><a class="r">olvidaste tu contraseña?</a>
