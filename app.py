@@ -1,5 +1,3 @@
-#from curses import flash
-#from curses import flash
 from flask import Flask, redirect, render_template, request, url_for
 from flaskext.mysql import MySQL
 
@@ -82,11 +80,24 @@ def reci():
    
    
      
-#INICIO DE SESION
+ #LOGIN   
+@app.route('/log', methods=['POST'])
+def log():
+    user = request.form['usuario']
+    passw = request.form['contrasena']
 
+    conn = mysql.connect()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM usuario WHERE correoUsuario= %s AND contraseñausuario = %s", (user, passw))
+    user = cursor.fetchone()
+    cursor.close()
 
-
-
+    if user:
+        # Inicio de sesión exitoso
+        return redirect("catalogo")
+    else:
+        # Inicio de sesión fallido
+        return redirect("login")
 
 
 # CONSULTAR DATOS
