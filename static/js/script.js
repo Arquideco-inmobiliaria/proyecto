@@ -21,7 +21,19 @@ boton.addEventListener("click", ()=>{
 //     logo.style.margin="20px";
 //     logo.style.marginTop="5px"
 // } )
+function agregarInputFile() {
+    const inputFile = document.querySelector('.imagenes');
+    const clone = inputFile.cloneNode(true);
+    
 
+    // Limpiar el valor del nuevo campo de entrada
+    clone.value = '';
+
+    const addButton = document.querySelector('button');
+    addButton.parentNode.insertBefore(clone , addButton);
+    const lineBreak = document.createElement('br');
+    addButton.parentNode.insertBefore(lineBreak, addButton);
+}
 
 
 

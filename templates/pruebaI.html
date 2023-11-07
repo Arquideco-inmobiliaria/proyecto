@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/inmuebleR" method="post" enctype="multipart/form-data">
+        <p> descripcion</p> <br>
+        <input type="text" id="descpricion" name="descpricion" placeholder="ingresa tu usuario"><br>
+        <p> habitaciones</p> <br>
+        <input type="number" id="h" name="habitaciones" placeholder="ingresa tu usuario"><br>
+        <p> baños</p> <br>
+        <input type="number" id="baños" name="baños" placeholder="ingresa tu usuario"><br>
+        <p> precio</p> <br>
+        <input type="number" id="precio" name="precio" placeholder="ingresa tu usuario"><br>
+        <p> estrato</p> <br>
+        <input type="number" id="estrato" name="estrato" placeholder="ingresa tu usuario"><br>
+        <p> ubicacion</p> <br>
+        <input type="text" id="ubicacion" name="ubicacion" placeholder="ingresa tu usuario"><br>
+        <p> t inmueble</p> <br>
+        <select name="tipo_inmueble" id="tipo_inmueble" class="TipoInmueble">
+            <option value="apartamento">Apartamento</option>
+            <option value="casa">Casa</option>
+            <option value="lote">Lote</option>
+        </select><br>
+        <input type="file" id="imagenes" name="imagenes" class="imagenes" multiple><br>
+    <button type="button" onclick="agregarInputFile()">Agregar más imágenes</button>
+     <br>
+<button type="submit">uwu</button>
+    </form>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

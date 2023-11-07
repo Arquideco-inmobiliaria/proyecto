@@ -53,6 +53,14 @@ ubicacion varchar (50) not null,
 TipoInmueble varchar (50) not null
 );
 
+create table ImagenesInmueble(
+idImagen int(20) primary key not NULL,
+nombreImagen varchar(100),
+fk_IdInmueble int(11) unsigned not null, 
+foreign key (fk_IdInmueble) references Inmueble(IdInmueble)
+
+);
+
 
 
    
