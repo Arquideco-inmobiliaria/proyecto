@@ -1,7 +1,12 @@
+<<<<<<< HEAD
 #from curses import flash
 #from curses import flash
+=======
+>>>>>>> 087ea55bc6e1c1f7bdf6f25c2230a0a6dcdb8836
 from flask import Flask, redirect, render_template, request, url_for
 from flaskext.mysql import MySQL
+from datetime import datetime
+import mysql.connector
 
 app = Flask(__name__)
 
@@ -43,6 +48,9 @@ def desc():
 @app.route("/cat")
 def cat():
     return render_template("inmueble.html")
+@app.route("/regIn")
+def rin():
+    return render_template("pruebaI.html")
 
 
 #proceso de registro de usuario
@@ -82,26 +90,81 @@ def reci():
    
    
      
-#INICIO DE SESION
+     
+@app.route('/inmuebleR', methods=['POST'])
+def inmuebleR():
+    nImagen=0
+    _descpricion = request.form["descpricion"]
+    _habitaciones = request.form["habitaciones"]
+    _baños = request.form["baños"]
+    _precio = request.form["precio"]
+    _estrato = request.form["estrato"]
+    _ubicacion = request.form["ubicacion"]
+    _tipo_inmueble = request.form['tipo_inmueble']
+    imagenes = request.files.getlist('imagenes')
 
-@app.route('/login', methods=['POST'])
-def login():
-    #verificacion de metodo, sirve para saber si esta haciendo el envio de los datos
-        #print(request.form["usuaname"])
-        #print(request.form["usupass"])
-        user= User(0,request.form["usuaname"],request.form["usupass"])
-        logged_user=modelUser.login(user)
-        
-        if logged_user != None:
-            if logged_user.password1:
-                return redirect(url_for("cat"))
-            else: 
-                flash("invalid password")
-                return redirect("login.html")
-        else: 
-                flash("user not found mamawbo")
-                return render_template("login.html")
+    datos = (_descpricion, _habitaciones, _baños, _precio, _estrato, _ubicacion, _tipo_inmueble)
 
+    sql = "INSERT INTO `inmueble` (`IdInmueble`, `descpricion`, `habitaciones`, `baños`, `precio`, `estrato`, `ubicacion`, `TipoInmueble`) VALUES (NULL, %s, %s, %s, %s, %s, %s, %s);"
+
+    try:
+        conn = mysql.connect()
+        cursor = conn.cursor()
+        print("uwu")
+        cursor.execute(sql, datos)
+        conn.commit()
+        print("uwu2")
+        id_inmueble = cursor.lastrowid  # Guarda el ID del inmueble recién registrado
+        print(str(id_inmueble) + "uwuwuwuwuwuwuw")
+        for imagen in imagenes:
+            nImagen=nImagen+1
+            print("entro al for")
+            now = datetime.now()
+            tiempo = now.strftime("%Y%H%M%S")
+            nuevoNombreFoto = str(tiempo)+str(nImagen) + imagen.filename
+            try:
+                imagen.save("uploads/" + nuevoNombreFoto)
+                ruta = "uploads/" + nuevoNombreFoto
+                print("Imagen guardada en:", ruta)
+                datos2 = (ruta, id_inmueble)
+                sql = "INSERT INTO `Imagenesinmueble` (`idImagen`, `nombreImagen`, `fk_IdInmueble`) VALUES (NULL, %s, %s);"
+
+                try:
+                    cursor.execute(sql, datos2)
+                    conn.commit()
+                except Exception as e:
+                    return f"Error en la inserción de imágenes: {str(e)}"
+            except Exception as e:
+                return f"Error al guardar la imagen: {str(e)}"
+
+    except Exception as e:
+        return f"Error en la inserción de inmueble: {str(e)}"
+
+    finally:
+        cursor.close()
+        conn.close()
+
+    return render_template("inmueble.html")
+   
+     
+ #LOGIN   
+@app.route('/log', methods=['POST'])
+def log():
+    user = request.form['usuario']
+    passw = request.form['contrasena']
+
+    conn = mysql.connect()
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM usuario WHERE correoUsuario= %s AND contraseñausuario = %s", (user, passw))
+    user = cursor.fetchone()
+    cursor.close()
+
+    if user:
+        # Inicio de sesión exitoso
+        return redirect("catalogo")
+    else:
+        # Inicio de sesión fallido
+        return redirect("login")
 
 
 # CONSULTAR DATOS
@@ -116,6 +179,18 @@ def crud():
     print(usuario)
     
     return render_template("crud.html", usuario=usuario)
+#CONSULTAR INMUEBLES
+@app.route("/inmuebleC")
+def inmuebleC():
+    sql = "SELECT i.descpricion,i.precio,i.ubicacion FROM inmueble i;"
+    conn = mysql.connect()
+    cursor = conn.cursor()
+    cursor.execute(sql)  # Corregido aquí: pasar los datos al método execute
+    inmueble=cursor.fetchall()
+    conn.commit()
+    print(inmueble)
+    
+    return render_template("crud.html", inmueble=inmueble)
 
 #ELIMINAR DATOS
 @app.route("/destroy/<int:id>")
