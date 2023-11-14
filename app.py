@@ -1,5 +1,5 @@
 #from curses import flash
-from curses import flash
+#from curses import flash
 from flask import Flask, redirect, render_template, request, url_for
 from flaskext.mysql import MySQL
 

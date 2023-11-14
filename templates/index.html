@@ -1,141 +1,126 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inmobiliaria Arquideco</title>
-    <!-- Enlace de Hoja de estilos -->
- <link rel="stylesheet" href="{{url_for("static", filename="../../static/css/estilos.css")}}"> 
-
+   <!--  <link rel="stylesheet" href="estilos.css"> -->
+    <link rel="stylesheet" href="{{url_for("static", filename="../../static/css/estilos.css")}}"> 
     <script src="https://kit.fontawesome.com/6131ecdde6.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <title>ARQUIDECO</title>
+    <link rel="icon" href="../static/img/descarga.png">
 </head>
-
 <body>
-    <!-- Realizaremos el menu de navegación con la etiqueta NAV -->
-    <nav id="nav">
-        <!-- Caja Menu Hamburguesa, logo etiqueta <i> -->
-        <div class="menu">
-            <button id="boton"><i class="fa-solid fa-bars"></i></button>
-                 <!-- Contenido menu hamburguesa -->
-        <div class="contenido" id="menu">
-           <button><a href="/regi">REGISTRATE</a></button>
-            <button><a href="/ini">INICIO SESIÓN</a></button>
+    <!-- Encabezado -->
+    <header>
+        <div class="head">
 
-           <button> <a href="">NUESTROS SERVICIOS</a></button>
-
-        <button><a href="">FLIPPING</a></button>
-        
-        <button> <a href="">TERMINOS Y CONDICIONES</a></button>
-
-            <p>INMOBILIARIA ARQUIDECO</p>
-        </div>
-
-        <div class="resp">
-        <p>Arquideco Inmobiliaria</p>
-        <div class="buttons">
-            <button>Registrar</button>
-            <button>Rniciar Sesion </button>
-        </div>
-        <div class="iconos">
-            <i class="fa-solid fa-user"></i>
-        </div>
-        </div>
-
-        </div>
-   
-        <!-- Botones menu navegación -->
-        <div class="botones" id="bot">
-            <button>CATALOGO</button>
-            <button><a href="/ini">LOG IN</a></button>
-            <button><a href="/regi">SING IN</a></button>
-        </div>
-        <!-- Imagen Logo -->
-        <div class="logo" id="logo">
-            <img src="../static/img/descarga.png" alt="">
-        </div>
-    </nav>
-
-    <!-- Carrusel Imagenes -->
-    <div class="carrusel">
-
-    <div class="img1">
-        <div class="ventana">
-            <h1>Encuentra tu inmueble ideal</h1>
-            <div class="vent">
-                <i class='bx bx-search-alt-2'></i>
-                <button><a href="">Ver inmuebles</a></button>
+            <div class="title-logo">
+                <img src="../static/img/descarga.png" alt="">
+                <h1>Arquideco inmobiliaria</h1>
             </div>
+            
+            <nav class="nav-bar" id="nav-bar">
+                <ul>
+                    <li><a href="/regi">Registrarse</a></li>
+                    <li><a href="/ini">Iniciar Sesion</a></i></li>
+                    <li class="op"><a href="/desc">Conoce Nuestro Servicio</a></li>
+                    <li class="op"><a href="">Conoce Mas Sobre Flipping</a></li>
+                    <li class="op"><a href="">Terminos y condiciones</a></li>
+
+                    <i class="fa-regular fa-user"></i>
+                </ul>
+            </nav>
+
+            <div class="hamburguesa" id="hamburguesa">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
         </div>
-      <img src="../static/img/images 1.png" style="width:100%">
-      <div class="text"></div>
-    </div>
-    
-    <div class="img1">
-      <img src="../static/img/casa11.jpg" style="width:100%">
-      <div class="text"></div>
-    </div>
-    
-    <div class="img1">
-      <img src="../static/img/casa22.jpg" style="width:100%">
-      <div class="text"></div>
-    </div>
-    
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
-    
-    </div>
+    </header>
 
-
-    <!-- Servicios -->
-    <div class="titulo">
-        <p>Nuestros Servicios</p>
+<!-- Carrusel -->
+  <div class="slider">
+    <ul>
+        
+        <li><img src="../static/img/1 1.png" alt="carrusel-1"></li>
+        <li><img src="../static/img/casafondo1.jpg" alt="carrusel-2"></li>
+        <li><img src="../static/img/casa11.jpg" alt="carrusel-3"></li>
+    </ul>
+    <div class="ventana" id="ventana">
+        <h1><b>Encuentra tu inmueble ideal</b></h1>
+       <div>
+        <i class='bx bx-search-alt' id="logo1"></i>
+        <button><a href="/ini">Ver inmuebles</a></button>
        </div>
+    </div>
+</div>
 
-       <!-- Caja de servicios numero1 (Flipping) -->
-       <div class="papa">
-    <div class="servi">
-        <div class="servi1">
-           <h1>Flipping</h1>
-           <p>
-            El Flipping House, también conocido como Flipping Inmobiliario, modernizarla y por consiguiente venderla a un precio más alto para conseguir una ganancia.
-            </p>
-        </div>
-        <div class="imgdiv1">
+<!-- cuerppo info servivios -->
+<p class="pp">Conoce Nuestros Servicios</p>
+<div class="servicios">
+    
+    <div class="servicios1">
+        <div class="imgser">
             <img src="../static/img/casa66.png" alt="">
         </div>
-    </div>
-</div>
-
-<!-- Caja de servicios numero2 (Compra y/o venta) -->
-
-    <div class="servidos">
-        <div class="servi2">
-           <h1>Compra y/o venta</h1>
-           <p>
-            Adquiere el inmueble de tus sueños a precios de ensueño, en nuestro portal virtual puedes buscar un inmueble que se ajuste a tus preferencias, en la zona que desees y que se ajuste a tu presupuesto.
-            </p>
+        <div class="info">
+            <h2>Flipping</h2>
+            <p>Flipping El Flipping House, también conocido como Flipping Inmobiliario, es una estrategia de inversión inmobiliaria que consiste en comprar una propiedad, modernizarla y por consiguiente venderla a un precio más alto para conseguir una ganancia.</p>
         </div>
-        <div class="imgdiv2">
+    </div>
+
+    <div class="servicios1">
+        <div class="imgser">
             <img src="../static/img/casa55.png" alt="">
         </div>
-    </div>
-
-   <!-- Caja de servicios numero3 (Arriendo) -->
-   <div class="servi">
-    <div class="servi1">
-       <h1>Arriendo</h1>
-       <p>
-        Encuentra en nuestro portal virtual un inmueble que se ajuste a tu presupuesto, encuentra las mejores ofertas y vive en tu lugar soñado gracias a tu inmobiliaria de confianza Arquideco.
-        
-        </p>
-    </div>
-    <div class="imgdiv1">
-        <img src="../static/img/casa66.png" alt="">
+        <div class="info">
+            <h2>Compra y/o venta</h2>
+            <p>Flipping El Flipping House, también conocido como Flipping Inmobiliario, es una estrategia de inversión inmobiliaria que consiste en comprar una propiedad, modernizarla y por consiguiente venderla a un precio más alto para conseguir una ganancia.</p>
+        </div>
     </div>
 </div>
-      
+
 </body>
+<footer>
+    <div class="pie-pagina">
+        <div class="redes-sociales">
+            <h2>Siguenos En Nuestras Redes Sociales</h2>
+            <div class="iconos">
+            <i class="fab fa-instagram"></i>
+            <p>arquidecoInmobiliaria </p>
+            </div>
+            <div class="iconos">
+            <i class="fab fa-facebook"></i>
+            <p>arquidecoInmobiliaria</p>
+            </div>
+            <div class="iconos">
+            <i class="fab fa-twitter"></i>
+            <p>arquidecoInmobiliaria</p>
+        </div>
+        </div>
+        <div class="descripcion">
+            <h2>Descripcion</h2>
+            <p> somos una inmobiliaria enfocada en la venta de inmuebles de mejor calidad para nuestros clientes, nuestros clientes siempre tendra la razon a la hora de escoger el inmueble de sus sueños </p>
+            <p>ven y confian en nosotros inmuebles de la mejor calidad a precios excelente </p>
+        </div>
+        <div class="numeros">
+            <h2>Contactanos:</h2>
+            <p>3112528749</p>
+            <p>3652114877</p>
+            <p>1245447893</p>
+        </div>
+        <div class="mapa">
+            <h2>Estamos Ubicados En:</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63628.77512334901!2d-74.1931817464405!3d4.630017711224005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c20c1186379%3A0x72c48cbe21e275ac!2sKennedy%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1693705236078!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+            
+        </div>
+    </div>
+    
+</footer>
 <script src="../static/js/script.js"></script>
 </html>

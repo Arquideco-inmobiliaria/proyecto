@@ -1,5 +1,6 @@
 :root{
     --azul: #071125;
+    --azul1: #02286efe;
     --azulclaro: #48D6ED;
     --azuloscuro: #337AB7;
     --azulnegro: #303342;
@@ -13,496 +14,698 @@
 }
 
 *{
-    margin:0;
-}
-/* Cuerpo con sus estilos principales */
-body{
-    font-size: 14px;
-    height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
     font-family: 'Inria', sans-serif;
 }
 
-nav{
-/* menu */
-    display: flex;
-    position:fixed;
-    flex-direction: row;
-    font-family: 'Inria', sans-serif;
-    z-index: 100;
-    width: 100%;  
+header{
     background: var(--azul);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
 }
 
-/* Menu hamburguesa */
-.menu{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 1rem;
-    }
-
-    .resp{
-        display: none;
-    }
-/* Contenido menu hamburguesa */
-
-.contenido{
-    width: 60%;
-    height: 100vh;
-    display: none;
-    margin-right: -190px;
-    margin-top: 20px;
-    position: relative;
-    line-height: 30px;
-    
-    
-
-}
-.contenido a{
-    color: white;   
-    gap: 2rem;
-    margin-bottom: 30px;
-    text-align: justify;
-}
-
-.contenido p{
-    color: white;
-    text-align: end;
-    position: absolute;
-    margin-top: 598px;
-
-}
-
-
- /* Tamaño y color del logo */
- .menu button{
-    background-color: transparent;
-    border: 0;
- }
-.menu i{
-        color: var(--blanco);
-        font-size: 2rem;
-    }
-
-/* Caja principal de botones menu de navegación */
-.botones{
+.head{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 10px;
-    margin: 12px;
-    margin-top: 20px;
+    align-self: center;
 }
 
-/* Caracteristicas de cada Botón */
-.botones button{
-    border-radius: 50px;
-    width: 85px;
-    height: 30px;
-    margin-right: 17px;
+
+.head .title-logo {
+    width: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-/* Imgene logo */
-.logo img{
-    margin-top: 15px;
-    margin-left: -20px;
+.head .title-logo h1{
+    font-size: 1.1em;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.head .hamburguesa{
+    display: none;
+}
+
+
+.nav-bar{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    
+}   
+
+.nav-bar ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-bar ul li a{
+    color: var(--blanco);
+    background:var(--azul1);
+    padding: 5px 1em;
+    border-radius: 5px;
+}
+.nav-bar  i{
+    color: var(--azul);
+    font-size: 1em;
+    padding: 5px;
+    background: var(--fondo);
+    border-radius: 2em;
+}
+.nav-bar ul  .op{
+    display: none;
+}
+
+
+/* Carrusel */
+
+.item img{
+    height: 10%;
+}
+
+.container{
+    margin: 0;
+}
+
+.carousel-inner{
   
 }
-    
 
-/* Estilos Carrusel */
-
-.carrusel{
-        max-width: 1000px;
-        position: relative;
-        margin: auto;
-        display: flex;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
+.slider{
+    width:100%;
+    overflow: hidden;
+    height: 30em;
+    margin: auto;
+}
+.slider ul{
+    display: flex;
+    width: 300%;
+    padding: 0;
+    animation: cambio 20s infinite alternate linear;
 }
 
-/* ESTILOS VENTANA MODAL */
-.ventana{
-    background-color: rgba(5, 5, 37, 0.5);
-    position: absolute;
-    width: 311px;
-    height: 120px;
-    top: 100px;
-    left: 50px;
-    right: 33px;
-    font-size: 10px;
-    border-radius: 10%;
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider img{
+    width: 100%;
+    height: 60%;
     
+}
+
+.ventana{
+    background-color: rgba(5, 5, 37, 0.6);
+    position: absolute;
+    width: 550px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    top: 17%;
+    border-radius: 25px;
+    flex-direction: column;
+    margin: 40px;
+
 }
 
 .ventana h1{
-    color: white;
-    padding: 15px;
-    top: 22px;
-    text-align: center;
-    font-size: 17px;
-
+    color: #fff;
+    align-items: center;
+    margin: 5%;
+    font-size: 130%;
+    margin-top: 65px;
 }
 
-.vent button{
+.ventana i{
+    color: #fff;
+    font-size: 50px;
+}
+
+.ventana button{
     background-color: #001F6D;
     color: #001F6D;
-    align-items: center;
-    margin: auto;
-    height: 45%;
-    width: 60%;
     border-radius: 25px;
     border: none;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    margin-right: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -65px;
+    height: 50px;
+    width: 250px;
+  
+
+    
+
 }
 
-.vent button a{
-    color: white;
-    border-radius: 30%;
-    top: 250px;
+.ventana a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 130%;
+    display: flex;
+    text-align: center;
+    
+
+}
+
+ #logo1{
+    color: var(--blanco);
+    display: flex;
+    justify-content: left;
+    font-size: 50px;
+    margin-left: -55px;
+    position: relative;
+    top: -10px;
+   
+    
+}
+
+/* Servicio */
+.servicios{
+    display: flex;
+ 
+    
    
 }
 
-.vent{
+.servicios1{
     display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.vent i{
-    font-size: 320%;
-    margin-left: 10%;
-    padding: 5%;
-    right: 20px;
-    left: 10%;
-    color: white;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-
-
-  .img1{
-width: 100%;
-flex: none;
-scroll-snap-align: center;
-  }
-
-
-/* Estilos apartado Servicios */
-.servi{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.titulo{
-font-family: 'Inria', sans-serif;
-font-size: 25px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0em;
-text-align: center;
-color:
-#001F6D;
-}
-
-.servi1{
-    margin-left: 20px;
-}
-
-.servi1 h1{
-font-family: 'Inria', sans-serif;
-font-size: 19px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0em;
-color:
-#001F6D;
-margin: 12px;
-margin-left: -0.1px;
-margin-top: -30px;
-}
-
-.servi1 p{
     text-align: justify;
-font-size: 12px;
-font-weight: 400;
-line-height: 14px;
-letter-spacing: 0em;
-text-align: left;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px;
 }
 
-.imgdiv1{
-    margin-right: 20px;
+.imgser img{
+    width: 250px;
+}
+
+.info{
+    text-align: justify;
+    padding: 20px;
+}
+
+.info h2{
+    color: var(--azul1);
+    font-weight: bold
+
 }
 
 
-/* Servicios Dos */
-/* Podemos observar que son los mismos estilos pero al sentido contrario */
 
-.servidos{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin-top: 30px;
+.pp{
+    font-size: 30px;
+    color: var(--azul1);
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
 }
 
-.servi2{
-    margin-right: 19px;
-    margin-top: 20px;
+@keyframes cambio {
+    0% { margin-left: 0;}
+    20% { margin-left: 0;}
+
+    25% { margin-left: -100%;}
+    45% { margin-left: -100%;}
+   
+    50% { margin-left: -200%;}
+    70% { margin-left: -200%;}
+
+    75% { margin-left: -100%;}
+    100% { margin-left: -100%;}
 }
 
-.servi2 h1{
-    text-align: end;
-    font-family: 'Inria', sans-serif;
-    font-size: 19px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0em;
-    color:
-    #001F6D;
-    margin: 12px;
-    margin-left: -0.1px;
-    margin-top: -30px;
-    }
-
-    .servi2 p{
-        text-align: end;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 14px;
-    letter-spacing: 0em;
-    }
-    
-    .imgdiv2{
-        margin-left: 20px;
-        margin-right: 20px;
-    }
-
-    /*Resolución notebooks*/
-@media screen and (min-width: 1024px){
-    
 /* pie de pagina */
-.resp {
-    display: block;
+
+/* pie de pagina */
+
+.pie-pagina{
+    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #071125;
     color: #fff;
-    padding: 10px 50px;
-}
-.resp p{
-    color: white;
-}
-.img1{
-    width: 10%;
-    height: 10%;
-}
-.img-text {
-    display: flex;
-    align-items: center;
 }
 
-
-
-.buttons {
-    text-align: right;
-    margin-left: 40%;
-
-    
-}
-
-.buttons button {
-    padding: 10px 20px;
-    background-color: #3733FF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    margin-left: 20px;
+.redes-sociales{
+    margin: 1%;
+   padding: 15px;
+   
 }
 
 .iconos{
-    margin-right: 50px;
+    display: flex;
+    justify-content: flex-start;
+   
 }
 
-.menu{
-    display:none;
+.iconos p{
+    padding: 6px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -10px;
 }
 
-.botones{
-    display: block;
+.redes-sociales h2{
+    font-size: 18px;
 }
 
-.logo img{
-    margin-top: 15px;
+.mapa, .map{
+    width: 80%;
+    height: 5%;
+    margin: 1%;
+
+}
+
+.mapa{
+    display: flex;
     margin-left: 20px;
-  
+    justify-content: center;
+
 }
 
-.carrusel{
-    max-width: 1500px;
-    position: relative;
-    margin: auto;
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+.mapa h2{
+    font-size: 18px;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-cursor: pointer;
-position: absolute;
-top: 50%;
-width: auto;
-padding: 16px;
-margin-top: -22px;
-color: white;
-font-weight: bold;
-font-size: 18px;
-transition: 0.6s ease;
-border-radius: 0 3px 3px 0;
-user-select: none;
-}
-
-
-
-.servi{
-    display: flex;
-    flex-direction:row;
-    margin-top: 30px;
-    margin-right: 400px;
+.numeros{
+    margin: 1%;
     
 }
 
-.titulo{
-font-family: 'Inria', sans-serif;
-font-size: 35px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0em;
-text-align: center;
-color:
-#001F6D;
-font-weight: bold;
+.numeros h2{
+    font-size: 18px;
+}
+.descripcion{
+    margin: 1%;
+
+    font-size: 14px;
 }
 
-.servi1{
-    margin-left: 80px;
+
+.descripcion h2{
+    font-size: 20px;
 }
 
-.papa{
+.iconos{
     display: flex;
-    flex-direction: row;
-
-}
-
-.servi1 h1{
-font-family: 'Inria', sans-serif;
-font-size: 19px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0em;
-color:
-#096d00;
-margin: 12px;
-margin-left: -0.1px;
-margin-top: -30px;
-}
-
-.servi1 p{
-text-align:justify;
-font-size: 12px;
-line-height: 14px;
-letter-spacing: 0em;
-width: 250px;
-}
-
-.imgdiv1{
-    margin-right: 50px;
-    width: 145px;
 }
 
 
-/* Servicios Dos */
-/* Podemos observar que son los mismos estilos pero al sentido contrario */
+/* Responsive  Lapto 1*/
+@media only screen and ( max-width: 1024px){
+    .head .title-logo {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    } 
 
-.servidos{
-    display: block;
-    flex-direction: row-reverse;
+    .nav-bar{
+        width: 35%;
+    }   
+
+    /* Modificar imagen de servicios */
+    .imgser img{
+        width: 200px;
+    }
+
+    .servicios1{
+        display: flex;
+        text-align: justify;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    
+    .info{
+        text-align: justify;
+        padding: 20px;
+        margin-top: -40px;
+    }
+
+    /* pie de pagina */
+    .mapa, .map{
+        width: 80%;
+        height: 5%;
+        margin: 1%;
+        padding: 20px;
+    
+    }
+    
+    .mapa{
+        display: flex;
+        margin-left: 15px;
+        justify-content: center;
+    
+    }
+    
+    .mapa h2{
+        font-size: 18px;
+    }
+
+
+} 
+
+
+/* responsive de Tableta */
+
+@media only screen and ( max-width: 768px){
+    .head .hamburguesa{
+        display: block;
+        cursor: pointer;
+        font-size: 2em ;
+        color: var(--fondo);
+        align-items: center;
+    }
+
+    .head .title-logo  {
+        width: 32%;
+        justify-content: space-between;
+    }
+
+    .nav-bar{
+        height: 0;
+        position: absolute;
+        top: 3.5em;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: var(--azul);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    
+    .nav-bar.active{
+        height: 20em;
+        
+    }
+    
+    .nav-bar ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        transition: 0.5s;
+        opacity: 0;
+        
+    }
+
+    .nav-bar ul li  {
+        padding:5%;
+    }
+    
+    .nav-bar ul .op{
+        display: block;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .nav-bar.active ul{
+        width: 90%;
+        opacity: 1;
+    }
+
+    .ventana{
+        background-color: rgba(5, 5, 37, 0.6);
+        position: absolute;
+        width: 450px;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        top: 10%;
+        border-radius: 25px;
+        flex-direction: column;
+        margin: 40px;
+    
+    }
+
+    .ventana.active{
+        display: none;
+    }
+
+    /* Servicios */
+    .pp{
+        font-size: 25px;
+        color: var(--azul1);
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        margin-top: -98px;
+    }
+
+    .info{
+        text-align: justify;
+        padding: 25px;
+    }
+    
+    .info h2{
+        color: var(--azul1);
+        font-weight: bold;
+        font-size: 20px;
+    
+    }
+
+    .imgser img{
+        width: 200px;
+        
+    }
+
+    .imgser{
+        display: flex;
+        justify-content: center;
+    }
+
+    .servicios1{
+        display: flex;
+        text-align: justify;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+    }
+
+    /* pie de pagina */
+    .mapa, .map{
+        width: 120%;
+        height: 5%;
+        padding: 20px;
+    
+    
+    }
+
+    .mapa{
+        display: flex;
+        flex-direction: column;
+    }
+
+
+ 
+}
+
+@media only screen and ( max-width: 430px){
+    .head .title-logo  {
+        width: 80%;
+        justify-content: space-around;
+    }
+
+    .ventana{
+        background-color: rgba(5, 5, 37, 0.6);
+        position: absolute;
+        width: 250px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        top: 5%;
+        border-radius: 25px;
+        flex-direction: column;
+        margin: 40px;
+    
+    }
+
+    
+.ventana h1{
+    color: #fff;
     align-items: center;
-    margin-top: 30px;
+    margin: 5%;
+    font-size: 15px;
+    margin-top: 20px;
 }
 
-.carrusel{
-    width: 23px;
-    height: 100px;
-    margin:0;
-    position: relative;
-    margin: auto;
-    display: flex;
-    overflow-x: scroll;
-    scroll-snap-type: x mandatory;
+.ventana i{
+    color: #fff;
+    font-size: 10px;
 }
 
-.img1 img{
-    height: 100%;
-    width: 20%;
-}
-
-/* ESTILOS VENTANA MODAL */
-.ventana{
-background-color: rgba(5, 5, 37, 0.5);
-position: absolute;
-width: 711px;
-height: 20%;
-top: 100px;
-left: 30%;
-right: 33px;
-font-size: 10px;
-border-radius: 15%;
-align-items: center;
-justify-content: center;
-}
-.vent button{
+.ventana button{
     background-color: #001F6D;
     color: #001F6D;
-    align-items: center;
-    margin: auto;
-    height: 45%;
-    width: 20%;
     border-radius: 25px;
     border: none;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    margin-right: 25%;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    height: 39px;
+    width: 150px;
+  
+
+    
+
+}
+
+.ventana a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 90%;
+    display: flex;
+    text-align: center;
+    
+
+}
+
+#logo1{
+    color: var(--blanco);
+    display: flex;
+    justify-content: left;
+    font-size: 30px;
+    margin-left: -35px;
+    position: relative;
+    top: -3px;
+   
+    
+}
+
+/* Servicio */
+.servicios{
+    display: flex;
+    flex-direction: column; 
+}
+
+.servicios1{
+    display: flex;
+    text-align: justify;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:3px;
+}
+
+.imgser img{
+    width: 200px;
+}
+
+.info{
+    text-align: justify;
+    padding: 35px;
+}
+
+.info h2{
+    color: var(--azul1);
+    font-weight: bold
+
 }
 
 
-.vent i{
-    font-size: 420%;
-    margin-left: 10%;
-    padding: 5%;
-    right: 20px;
-    left: 10%;
-    color: white;
+
+.pp{
+    font-size: 20px;
+    color: var(--azul1);
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    margin-top: -250px;
 }
+
+/* pie de pagina */
+
+
+.pie-pagina{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #071125;
+    flex-direction: column;
+    color: #fff;
+}
+
+.redes-sociales{
+    margin: 1%;
+   padding: 15px;
+   
+}
+
+.iconos{
+    display: flex;
+    justify-content: flex-start;
+   
+}
+
+.iconos p{
+    padding: 6px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -10px;
+}
+
+.redes-sociales h2{
+    font-size: 18px;
+}
+
+.mapa, .map{
+    width: 80%;
+    height: 5%;
+    margin: 1%;
+
+}
+
+.mapa{
+    display: flex;
+    margin-left: 20px;
+    justify-content: center;
+
+}
+
+.mapa h2{
+    font-size: 18px;
+}
+
+.numeros{
+    margin: 1%;
+    
+}
+
+.numeros h2{
+    font-size: 18px;
+}
+.descripcion{
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+    padding: 20px;
+}
+
+
+.descripcion h2{
+    font-size: 20px;
+    
+}
+
+.iconos{
+    display: flex;
+}
+
+    
+    
 
 }
