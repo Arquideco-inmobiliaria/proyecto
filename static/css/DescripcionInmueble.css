@@ -1,119 +1,337 @@
-body {
+:root{
+    --azul: #071125;
+    --azul1: #02286efe;
+    --azulclaro: #48D6ED;
+    --azuloscuro: #337AB7;
+    --azulnegro: #303342;
+    --negro: #333333;
+    --negro2: #000;
+    --gris: #B2B3B3;
+    --fondo: #FFFEFC;
+    --verdeazul: #157A8A;
+    --Magenta: #9C2759;
+    --blanco: #fff;
+}
+
+*{
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    /* background-image: url('../img/B1112.jpg'); */
-    background-color: #e9e1e1;
-    
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Inria', sans-serif;
 }
 
-/* pie de pagina */
-.header {
+body{
+    background-image: linear-gradient(rgba(255,255,255, 0.7), rgba(255,255,255, 0.7), rgba(255,255,255, 0.7)),
+     url("../img/prueba+.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+   
+}
+
+
+
+/* header */
+header{
+    background: var(--azul);
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.head{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: #071125;
-    color: #fff;
-    padding: 10px 50px;
+    align-self: center;
 }
-.img1{
-    width: 10%;
-    height: 10%;
-}
-.img-text {
+
+
+.head .title-logo {
+    width: 18%;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+
+.head .title-logo h1{
+    font-size: 1.1em;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.head .hamburguesa{
+    display: none;
 }
 
 
-
-.buttons {
-    text-align: right;
-    margin-left: 40%;
-
+.nav-bar{
+    width: 25%;
+    display: flex;
+    justify-content: center;
     
+}   
+
+.nav-bar ul {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.buttons button {
-    padding: 10px 20px;
-    background-color: #3733FF;
-    color: #fff;
-    border: none;
+.nav-bar ul li a{
+    color: var(--blanco);
+    background:var(--azul1);
+    padding: 5px 1em;
     border-radius: 5px;
-    margin-left: 20px;
 }
-
-.iconos{
-    margin-right: 50px;
+.nav-bar  i{
+    color: var(--azul);
+    font-size: 1em;
+    padding: 5px;
+    background: var(--fondo);
+    border-radius: 2em;
+}
+.nav-bar ul  .op{
+    display: none;
 }
 
 
 /* imagen de la casa con su descripcion  */
 
-.contenedor{
-    background-color: rgba(255, 255, 255, 0.5);
+.holii{
     display: flex;
-    justify-content: center ;
-    margin: 30px;   
-    width: 80% ;
-    margin-left: 10%;
-    border-radius: 10%;
+    justify-content: center;
+}
+
+.button button {
+    padding: 10px 20px;
+    background-color: #3733FF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+.button{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px;
+}
+.contenedor{
+    border: 2px solid rgb(172, 169, 169);
+    background-color: rgba(255, 255, 255, 0.293);
+    display: flex;
+    margin: 20px;   
+    border-radius: 25px;
+    width: 60%;
+    height: 10%;
     
 }
 
-.imagen{
- border-radius: 10% 0% 0% 10%;
- 
-
+.contenedor img{
+    width: 400px;
+    height: 200px;
+    border-radius: 25px;
 }
 .text{
+    border-radius: 0px 10px 10px 0px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items:flex-start;
+    padding: 12px;
+    
 }
-.texto{
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 50%;
+.descrip{
+    font-size: 13px;
+    margin-top: 15px;
+
+}
+.ubi{
+    font-size: 15px;
+    font-weight: bold;
+
+
+    
+}
+.estrato{
+    
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 15px;
+
 }
 /* imagenes dentro de la casa  */
 
 .container{
     display: flex;
     justify-content: center;
+    align-items: center;
     
 }
 .contenido{
-    margin-left: 3%;
-    
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1%;
 }
 .image{
-    border-radius: 5%;
-    width: 270px;
-    height: 150px;
+    border-radius: 10px;
+    width: 350px;
+    height: 200px;
+
+}
+img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* calendario-maps */
 
-
-.calendario{
+.calendario-mapa{
+    display: flex;
+    justify-content: space-around;
+    padding: 2%;
     
-    width: 40%;
-    margin: 5%;
-    margin-left: 1%;
+}
+.calendario{
+    height: 90%;
+    width: 90%;
+
 }
 .calendario-maps{
-    background-color: rgba(255, 255, 255, 0.5);
-    margin:40px;
     display: flex;
-    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-items: center;
+    justify-content: center;
+    border-radius: 2%;
+    
 }
 
 .maps{
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    margin-left: 2%;
+    border-radius: 20px;
+}
+
+
+
+/* pie de pagina */
+
+.pie-pagina{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #071125;
+    color: #fff;
+}
+
+.redes-sociales{
+    margin: 1%;
+   padding: 15px;
+   
+}
+
+.iconos{
+    display: flex;
+    justify-content: flex-start;
+   
+}
+
+.iconos p{
+    padding: 6px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -10px;
+}
+
+.redes-sociales h2{
+    font-size: 18px;
+}
+
+.mapa, .map{
+    width: 80%;
+    height: 5%;
+    margin: 1%;
+
+}
+
+.mapa{
+    display: flex;
+    margin-left: 20px;
+    justify-content: center;
+
+}
+
+.mapa h2{
+    font-size: 18px;
+}
+
+.numeros{
+    margin: 1%;
+    
+}
+
+.numeros h2{
+    font-size: 18px;
+}
+.descripcion{
+    margin: 1%;
+
+    font-size: 14px;
+}
+
+
+.descripcion h2{
+    font-size: 20px;
+}
+
+.iconos{
+    display: flex;
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .header , .img-text .buttons{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .buttons{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    /* descripcion del inmueble  */
+
+    .contenedor {
+        flex-direction: column; 
+        width: 100%;
+        align-items: center;
+    }
+     img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .text {
+        width: 100%;
+    } 
+
+/* imagenes carrucel  */
+
+    .container {
+        flex-direction: column; 
+        align-items: center;
+        
+    }
+    .contenido{
+        padding: 1%;
+    }
+
+   
+    .calendario-mapa{
+        flex-direction: column;
+    }
+     
 }

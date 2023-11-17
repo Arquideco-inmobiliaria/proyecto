@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-#from curses import flash
-#from curses import flash
-=======
->>>>>>> 087ea55bc6e1c1f7bdf6f25c2230a0a6dcdb8836
 from flask import Flask, redirect, render_template, request, url_for
 from flaskext.mysql import MySQL
 from datetime import datetime
-import mysql.connector
+""" import mysql.connector """
 
 app = Flask(__name__)
 
