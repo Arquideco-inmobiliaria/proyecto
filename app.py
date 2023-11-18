@@ -39,7 +39,7 @@ def ini():
 
 @app.route("/desc")
 def desc():
-    return render_template("DescripcionInmueble.html")
+    return render_template("descripcioninmuebleadmin.html")
 @app.route("/cat")
 def cat():
     return render_template("inmueble.html")

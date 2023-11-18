@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for("static", filename="../../static/css/inmueble.css")}}"> 
+    <title>Inmueble</title>
+    <!-- <link rel="stylesheet" href="{{url_for("static", filename="../../static/css/estilos.css")}}">  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+    <header>
+        <div class="head">
+
+            <div class="title-logo">
+                <img src="../static/img/descarga.png" alt="">
+                <h1>Arquideco inmobiliaria</h1>
+            </div>
+            
+            <nav class="nav-bar" id="nav-bar">
+                <ul>
+                    <!-- ventana modal agregar inmueble  -->
+                    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Responsivo</title>
+</head>
+<body>
+
+    <style>
+
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.textt{
+    display: flex;
+    justify-content: center;
+}
+.imagenes-inmueble{
+    height: 20%;
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.modal-contenido {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 600px;
+}
+
+.cerrar-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.data-containerr{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 100%;
+
+}
+.data-containerr{
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+}
+.data-field{
+    display: flex;
+    padding: 1%;
+    width: 50%;
+    flex-direction: column;
+}
+.data-label{
+    font-size: 1rem;
+}
+
+.datos-inmueble{
+    display: flex;
+    
+}
+button{
+    border-radius: 5px;
+    border: 2px solid #888;
+    width: 10%;
+    height: auto;
+}
+
+.boton {
+    border-radius: 5px;
+    border: 2px solid #888;
+    width: 20%;
+    height: auto;
+}
+
+.cerrar-modal:hover,
+.cerrar-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+
+
+    </style>
+    <button id="mostrarModal">Agregar Inmueble</button>
+
+    <div class="modal" id="miModal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" id="cerrarModal">&times;</span>
+            <div class="containerr">
+                <center>
+                <div class="textt">
+                    <h2>agrega un nuevo inmueble </h2>
+                </div>
+                <div class="imagenes-inmueble">
+                    <p>aca van las imagenes</p>
+                </div>
+                </center>
+                <div class="data-containerr">
+                    <div class="data-field">
+                        <span class="data-label">precio:</span>
+                        <input type="text" class="tamaño" placeholder="">
+                    </div>
+                    <div class="data-field">
+                        <span class="data-label">descripcion del inmueble:</span>
+                        <input type="text" class="tamaño" placeholder="">
+                    </div>
+                <div class="datos-inmueble">
+                    <div class="data-field">
+                        <span class="data-label">numero de habitaciones:</span>
+                        <input type="number" class="tamaño" placeholder="">
+                    </div>
+                    <div class="data-field">
+                        <span class="data-label">numero de pisos:</span>
+                        <input type="number" class="tamaño" placeholder="">
+                    </div>
+                    <div class="data-field">
+                        <span class="data-label">numero de baños:</span>
+                        <input type="number" class="tamaño" placeholder="">
+                    </div>
+                </div>
+
+                <div class="datos-inmueble">
+                    <div class="data-field">
+                        <span class="data-label">tipo de inmueble:</span>
+                        <input type="text" class="tamaño" placeholder="">
+                    </div>
+                    <div class="data-field">
+                        <span class="data-label">tipo de servicios:</span>
+                        <input type="text" class="tamaño" placeholder="">
+                    </div>
+                    <div class="data-field">
+                        <span class="data-label">estrato:</span>
+                        <input type="number" class="tamaño" placeholder="">
+                    </div>
+                </div>
+                <div class="datos-inmueble">
+                    <div class="data-field">
+                        <span class="data-label">localidad:</span>
+                        <input type="text" class="tamaño" placeholder="">
+                    </div>
+                    <div class="data-field">
+                        <span class="data-label">barrio:</span>
+                        <input type="text" class="tamaño" placeholder="">
+                    </div>
+                    
+                </div>
+                <div class="data-field">
+                    <span class="data-label">dirrecion del inmueble:</span>
+                    <input type="text" class="tamaño" placeholder="">
+                </div>
+                    <button class="boton">agendar cita</button>
+                    
+                    
+        </div>
+    </div>
+        </div>
+    </div>
+    <script>
+
+// script.jsdocument.addEventListener('DOMContentLoaded', function () {
+    var btnMostrarModal = document.getElementById('mostrarModal');
+    var modal = document.getElementById('miModal');
+    var btnCerrarModal = document.getElementById('cerrarModal');
+
+    btnMostrarModal.addEventListener('click', function () {
+        modal.style.display = 'block';
+    });
+
+    btnCerrarModal.addEventListener('click', function () {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
+
+    </script>
+</body>
+</html>
+                    <li class="op"><a href="/cat">Conoce Nuestro Servicio</a></li>
+                    <li class="op"><a href="">Conoce Mas Sobre Flipping</a></li>
+                    <li class="op"><a href="">Terminos y condiciones</a></li>
+
+                    <i class="fa-regular fa-user"></i>
+                </ul>
+            </nav>
+
+            <div class="hamburguesa" id="hamburguesa">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
+        </div>
+    </header>
+    <!-- ------------------------------------------------------------------ventana modal---------------------------------------------------------------------------------------------------  -->
+    <button id="mostrarModal">Caracteristicas Inmueble</button>
+
+    <div class="modal" id="miModal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal" id="cerrarModal">&times;</span>
+            <div class="containerr">
+                <center>
+                <div class="textt">
+                    <h2>Eligue Las Caracteristicas De Tu Inmueble De Ensueño </h2>
+                </div>
+                </center>
+                <div class="data-containerr">
+                    <div class="data-field">
+                        <span class="data-label">Precio Maximo:</span>
+                        <input type="number" class="tamaño" placeholder="Precio Maximo...">
+                    </div>
+                    <div class="data-field">
+                        <span class="data-label">Localidad:</span>
+                        <input type="text" class="tamaño" placeholder="Localidad...">
+                    </div>
+                    <div class="data-field">
+                        <span class="data-label">Estrato:</span>
+                        <input type="number" class="tamaño" placeholder="Estrato...">
+                    </div>
+                    <div class="data-field">
+                        <label>Habitaciones </label>
+                        <input type="number" class="tamaño" placeholder="Cant Habitaciones...">
+                    </div>
+                    <div class="data-field">
+                        <label>Baños </label>
+                        <input type="number" class="tamaño" placeholder="Cant Baños...">
+                    </div>
+                   
+                   
+               
+          </div>
+      </div>
+        </div>
+    </div>
+<!-- inmueble -->
+    <div class="inmueble">
+         <div class="busqueda">
+            <h1>Busca Tu Inmueble Por Palabras Clave</h1>
+            <div class="i-text">
+                <i class='bx bx-search-alt' id="logo1"></i>
+                <input type="text" class="search-input" placeholder="Buscar...">
+            </div>
+           
+         </div>
+    </div>
+    <!-- Preguntas De Filtro  -->
+    <div class="putos">
+    <div class="container">
+        <div class="textt">
+            <h2>Eligue Las Caracteristicas De Tu Inmueble De Ensueño</h2>
+        </div>
+        <div class="data-container">
+            <div class="data-field">
+                <span class="data-label">Precio Maximo:</span>
+                <input type="number" class="tamaño" placeholder="Precio Maximo...">
+            </div>
+            <div class="data-field">
+                <span class="data-label">Localidad:</span>
+                <input type="text" class="tamaño" placeholder="Localidad...">
+            </div>
+            <div class="data-field">
+                <span class="data-label">Estrato:</span>
+                <input type="number" class="tamaño" placeholder="Estrato...">
+            </div>
+            <div class="data-field">
+                <label>Habitaciones </label>
+                <input type="number" class="tamaño" placeholder="Cant Habitaciones...">
+            </div>
+            <div class="data-field">
+                <label>Baños </label>
+                <input type="number" class="tamaño" placeholder="Cant Baños...">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- casas con su descripcion y precio  -->
+    <div class="cuadro1">
+        <div class="contenedor">
+           <a href="/desc"><img src="../static/img/casa22.jpg" alt="Descripción de la imagen" class="imagen"></a> 
+           
+            <p class="texto1">DESDE $200.000</p>
+            <p class="texto">Estrato 4, cuenta con 3 Hanitaciones, 2 Baños, Terraza, Cocina, Sala, Comedor, 1 Aparta  Estudio</p>
+           <hr>
+            <p class="ubi">Ubicada en Bogotá Suba</pc>
+        </div>
+<!-- casa2 -->
+        <div class="contenedor">
+            <img src="../static/img/casa22.jpg" alt="Descripción de la imagen" class="imagen">
+           
+            <p class="texto1">$200.000</p>
+            <p class="texto">Estrato 4, cuenta con 3 Hanitaciones, 2 Baños, Terraza, Cocina, Sala, Comedor, 1 Aparta  Estudio</p>  
+            <hr>          
+            <p class="ubi">Ubicada en Bogotá Suba</p>
+        </div>
+
+<!-- casa3 -->
+        <div class="contenedor">
+            <img src="../static/img/casa2.jpg" alt="Descripción de la imagen" class="imagen">
+           
+            <p class="texto1">$200.000</p>
+            <p class="texto">Estrato 4, cuenta con 3 Hanitaciones, 2 Baños, Terraza, Cocina, Sala, Comedor, 1 Aparta  Estudio</p> 
+            <hr>           
+            <p class="ubi">Ubicada en Bogotá Suba</p>
+        </div>
+    </div>
+
+    <!-- container2 -->
+    <div class="cuadro2">
+        <div class="contenedor">
+            <img src="../static/img/casa4.jpg" alt="Descripción de la imagen" class="imagen">
+           
+            <p class="texto1">$200.000</p>
+            <p class="texto">Estrato 4, cuenta con 3 Hanitaciones, 2 Baños, Terraza, Cocina, Sala, Comedor, 1 Aparta  Estudio</p> 
+            <hr>           
+            <p class="ubi">Ubicada en Bogotá Suba</p>
+        </div>
+
+        <div class="contenedor">
+            <img src="../static/img/casa5.jpg" alt="Descripción de la imagen" class="imagen">
+           
+            <p class="texto1">$200.000</p>
+            <p class="texto">Estrato 4, cuenta con 3 Hanitaciones, 2 Baños, Terraza, Cocina, Sala, Comedor, 1 Aparta  Estudio</p> 
+            <hr>           
+            <p class="ubi">Ubicada en Bogotá Suba</p>
+        </div>
+
+        <div class="contenedor">
+            <img src="../static/img/casa6.jpg" alt="Descripción de la imagen" class="imagen">
+           
+            <p class="texto1">$200.000</p>
+            <p class="texto">Estrato 4, cuenta con 3 Hanitaciones, 2 Baños, Terraza, Cocina, Sala, Comedor, 1 Aparta  Estudio</p> 
+           <hr>          
+            <p class="ubi">Ubicada en Bogotá Suba</p>
+        </div>
+
+       
+    </div>
+    <!-- container3 -->
+    <div class="cuadro3">
+        <div class="contenedor">
+            <img src="../static/img/casa4.jpg" alt="Descripción de la imagen" class="imagen">
+           
+            <p class="texto1">$200.000</p>
+            <p class="texto">Estrato 4, cuenta con 3 Hanitaciones, 2 Baños, Terraza, Cocina, Sala, Comedor, 1 Aparta  Estudio </p>  
+            <hr>          
+            <p class="ubi">Ubicada en Bogotá Suba</p>
+        </div>
+
+        <div class="contenedor">
+            <img src="../static/img/casa5.jpg" alt="Descripción de la imagen" class="imagen">
+           
+            <p class="texto1">$200.000</p>
+            <p class="texto">Estrato 4, cuenta con 3 Hanitaciones, 2 Baños, Terraza, Cocina, Sala, Comedor, 1 Aparta  Estudio</p> 
+            <hr>         
+            <p class="ubi">Ubicada en Bogotá Suba</p>
+        </div>
+
+        <div class="contenedor">
+            <img src="../static/img/casa6.jpg" alt="Descripción de la imagen" class="imagen">
+           
+            <p class="texto1">$200.000</p>
+            <p class="texto">Estrato 4, cuenta con 3 Hanitaciones, 2 Baños, Terraza, Cocina, Sala, Comedor, 1 Aparta  Estudio</p>  
+            <hr>        
+            <p class="ubi">Ubicada en Bogotá Suba</p>
+        </div>
+
+       
+    </div>
+    </div>
+
+    <script>
+
+        // script.jsdocument.addEventListener('DOMContentLoaded', function () {
+            var btnMostrarModal = document.getElementById('mostrarModal');
+            var modal = document.getElementById('miModal');
+            var btnCerrarModal = document.getElementById('cerrarModal');
+       
+            btnMostrarModal.addEventListener('click', function () {
+                modal.style.display = 'block';
+            });
+       
+            btnCerrarModal.addEventListener('click', function () {
+                modal.style.display = 'none';
+            });
+       
+            window.addEventListener('click', function (event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+       
+       
+            </script>
+
+            <script src="../static/js/script.js"></script>
+</body>
+</html>
