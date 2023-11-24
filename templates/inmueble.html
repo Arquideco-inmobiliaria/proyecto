@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{url_for("static", filename="../../static/css/inmueble.css")}}"> 
-    <title>Inmueble</title>
+    <title>INMUEBLES</title>
+    <link rel="icon" href="../static/img/descarga.png">
     <!-- <link rel="stylesheet" href="{{url_for("static", filename="../../static/css/estilos.css")}}">  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -38,7 +39,7 @@
         </div>
     </header>
     <!-- ------------------------------------------------------------------ventana modal---------------------------------------------------------------------------------------------------  -->
-    <button id="mostrarModal">Caracteristicas Inmueble</button>
+    <button id="mostrarModal" class="mostrarModal">Caracteristicas Inmueble</button>
 
     <div class="modal" id="miModal">
         <div class="modal-contenido">
@@ -46,7 +47,7 @@
             <div class="containerr">
                 <center>
                 <div class="textt">
-                    <h2>Eligue Las Caracteristicas De Tu Inmueble De Ensueño </h2>
+                    <h2>Elije las caracteristicas de tu Inmueble de ensueño </h2>
                 </div>
                 </center>
                 <div class="data-containerr">
@@ -80,7 +81,7 @@
 <!-- inmueble -->
     <div class="inmueble">
          <div class="busqueda">
-            <h1>Busca Tu Inmueble Por Palabras Clave</h1>
+            <h1>Busca tu Inmueble por palabras clave</h1>
             <div class="i-text">
                 <i class='bx bx-search-alt' id="logo1"></i>
                 <input type="text" class="search-input" placeholder="Buscar...">
@@ -92,7 +93,7 @@
     <div class="putos">
     <div class="container">
         <div class="textt">
-            <h2>Eligue Las Caracteristicas De Tu Inmueble De Ensueño</h2>
+            <h2>¡Elije las caracteristicas de tu Inmbueble!</h2>
         </div>
         <div class="data-container">
             <div class="data-field">
@@ -240,4 +241,40 @@
 
             <script src="../static/js/script.js"></script>
 </body>
+<footer>
+    <div class="pie-pagina">
+        <div class="redes-sociales">
+            <h2>Siguenos En Nuestras Redes Sociales</h2>
+            <div class="iconos">
+            <i class="fab fa-instagram"></i>
+            <p>arquidecoInmobiliaria </p>
+            </div>
+            <div class="iconos">
+            <i class="fab fa-facebook"></i>
+            <p>arquidecoInmobiliaria</p>
+            </div>
+            <div class="iconos">
+            <i class="fab fa-twitter"></i>
+            <p>arquidecoInmobiliaria</p>
+        </div>
+        </div>
+        <div class="descripcion">
+            <h2>Descripcion</h2>
+            <p> somos una inmobiliaria enfocada en la venta de inmuebles de mejor calidad para nuestros clientes, nuestros clientes siempre tendra la razon a la hora de escoger el inmueble de sus sueños </p>
+            <p>ven y confian en nosotros inmuebles de la mejor calidad a precios excelente </p>
+        </div>
+        <div class="numeros">
+            <h2>Contactanos:</h2>
+            <p>3112528749</p>
+            <p>3652114877</p>
+            <p>1245447893</p>
+        </div>
+        <div class="mapa">
+            <h2>Estamos Ubicados En:</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63628.77512334901!2d-74.1931817464405!3d4.630017711224005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c20c1186379%3A0x72c48cbe21e275ac!2sKennedy%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1693705236078!5m2!1ses-419!2sco" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="map"></iframe>
+            
+        </div>
+    </div>
+    
+</footer>
 </html>

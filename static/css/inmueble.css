@@ -316,25 +316,504 @@ header{
     padding: 6px;
 }
 
+.mostrarModal{
+    display: none;
+}
+
+/* pie de pagina */
+
+.pie-pagina{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #071125;
+    color: #fff;
+}
+
+.redes-sociales{
+    margin: 1%;
+   padding: 15px;
+   
+}
+
+.iconos{
+    display: flex;
+    justify-content: flex-start;
+   
+}
+
+.iconos p{
+    padding: 6px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -10px;
+}
+
+.redes-sociales h2{
+    font-size: 18px;
+}
+
+.mapa, .map{
+    width: 80%;
+    height: 5%;
+    margin: 1%;
+
+}
+
+.mapa{
+    display: flex;
+    margin-left: 20px;
+    justify-content: center;
+
+}
+
+.mapa h2{
+    font-size: 18px;
+}
+
+.numeros{
+    margin: 1%;
+    
+}
+
+.numeros h2{
+    font-size: 18px;
+}
+.descripcion{
+    margin: 1%;
+
+    font-size: 14px;
+}
 
 
-@media screen and (max-width: 768px){
-    /* pie de pagina  */
+.descripcion h2{
+    font-size: 20px;
+}
+
+.iconos{
+    display: flex;
+}
 
 
-    .container{
+
+
+
+
+
+@media only screen and ( max-width: 1024px){
+    .head .title-logo {
+        width: 25%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    } 
+
+    .nav-bar{
+        width: 35%;
+    }   
+
+    /* Modificar imagen de servicios */
+    .imgser img{
+        width: 200px;
+    }
+
+    .servicios1{
+        display: flex;
+        text-align: justify;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    
+    .info{
+        text-align: justify;
+        padding: 20px;
+        margin-top: -40px;
+    }
+
+    /* pie de pagina */
+    .mapa, .map{
+        width: 80%;
+        height: 5%;
+        margin: 1%;
+        padding: 20px;
+    
+    }
+    
+    .mapa{
+        display: flex;
+        margin-left: 15px;
+        justify-content: center;
+    
+    }
+    
+    .mapa h2{
+        font-size: 18px;
+    }
+
+    .data-container {
+        width: 90%; /* Ancho del contenedor de datos */
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+       
+    }
+
+    .data-label{
+        font-size: 14px;
+    }
+
+    .tamaño{
+        width: 120px;
+        height: 10px;
+    }
+
+    .textt{
+        font-size: 15px;
+        text-align: start;
+    }
+
+    .container {
+        width: 20%;
+        padding: 30px;
+        margin-left: 3%;
+        margin-right: 20px; 
+        margin-top: -105px;/* separacion ente filtro y casa */
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .mostrarModal{
         display: none;
     }
-    /* contendores del inmueble  */
 
-    .cuadro1{
+    .busqueda{
         display: flex;
-        justify-content: center;
+        justify-content:center;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+        margin: 20px;
+        
     }
-    .putos{
+
+
+} 
+
+
+/* responsive de Tableta */
+
+@media only screen and ( max-width: 768px){
+    .head .hamburguesa{
+        display: block;
+        cursor: pointer;
+        font-size: 2em ;
+        color: var(--fondo);
+        align-items: center;
+    }
+
+    .head .title-logo  {
+        width: 32%;
+        justify-content: space-between;
+    }
+
+    .nav-bar{
+        height: 0;
+        position: absolute;
+        top: 3.5em;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: var(--azul);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+    
+    .nav-bar.active{
+        height: 20em;
+        
+    }
+    
+    .nav-bar ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        transition: 0.5s;
+        opacity: 0;
+        
+    }
+
+    .nav-bar ul li  {
+        padding:5%;
+    }
+    
+    .nav-bar ul .op{
+        display: block;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+    }
+    .nav-bar.active ul{
+        width: 90%;
+        opacity: 1;
+    }
+
+    .ventana{
+        background-color: rgba(5, 5, 37, 0.6);
+        position: absolute;
+        width: 450px;
+        height: 180px;
+        display: flex;
+        align-items: center;
+        top: 10%;
+        border-radius: 25px;
+        flex-direction: column;
+        margin: 40px;
+    
+    }
+
+    .ventana.active{
+        display: none;
+    }
+
+    
+    /* pie de pagina */
+    .mapa, .map{
+        width: 120%;
+        height: 5%;
+        padding: 20px;
+    
+    
+    }
+
+    .mapa{
         display: flex;
         flex-direction: column;
     }
-    /* contendor y imagen del inmueble  */
+
+ 
+    .mostrarModal{
+        display: block;
+    } 
+    
+    .container{
+        display: none;
+    }
+
+    #mostrarModal{
+        background-color: var(--azul1);
+        width: 100px;
+        height: 40px;
+        color: var(--blanco);
+        border-radius: 15px;
+        margin: 10px;
+    }
+
+    .data-label{
+        font-size: 17px;
+    }
+
+    .tamaño{
+        width: auto;
+        height: 10px;
+    }
+
+
+
+ 
+}
+
+
+@media only screen and ( max-width: 430px){
+    .head .title-logo  {
+        width: 80%;
+        justify-content: space-around;
+    }
+
+    .ventana{
+        background-color: rgba(5, 5, 37, 0.6);
+        position: absolute;
+        width: 250px;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        top: 5%;
+        border-radius: 25px;
+        flex-direction: column;
+        margin: 40px;
+    
+    }
+
+    
+.ventana h1{
+    color: #fff;
+    align-items: center;
+    margin: 5%;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.ventana i{
+    color: #fff;
+    font-size: 10px;
+}
+
+.ventana button{
+    background-color: #001F6D;
+    color: #001F6D;
+    border-radius: 25px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    height: 39px;
+    width: 150px;
+  
+
+    
+
+}
+
+.ventana a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 90%;
+    display: flex;
+    text-align: center;
+    
+
+}
+
+#logo1{
+    color: var(--blanco);
+    display: flex;
+    justify-content: left;
+    font-size: 30px;
+    margin-left: -35px;
+    position: relative;
+    top: -3px;
+   
+    
+}
+
+
+/* pie de pagina */
+
+
+.pie-pagina{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #071125;
+    flex-direction: column;
+    color: #fff;
+}
+
+.redes-sociales{
+    margin: 1%;
+   padding: 15px;
    
 }
+
+.iconos{
+    display: flex;
+    justify-content: flex-start;
+   
+}
+
+.iconos p{
+    padding: 6px;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -10px;
+}
+
+.redes-sociales h2{
+    font-size: 18px;
+}
+
+.mapa, .map{
+    width: 80%;
+    height: 5%;
+    margin: 1%;
+
+}
+
+.mapa{
+    display: flex;
+    margin-left: 20px;
+    justify-content: center;
+
+}
+
+.mapa h2{
+    font-size: 18px;
+}
+
+.numeros{
+    margin: 1%;
+    
+}
+
+.numeros h2{
+    font-size: 18px;
+}
+.descripcion{
+    margin: 1%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 14px;
+    padding: 20px;
+}
+
+
+.descripcion h2{
+    font-size: 20px;
+    
+}
+
+.iconos{
+    display: flex;
+}
+
+.search-input{
+    width: 300px; /* Ancho del cuadro de búsqueda */
+    height: 20px;
+}
+
+.busqueda h1{
+    text-align: center;
+}
+
+.busqueda{
+    margin-top: -20px;
+}
+
+.search-input{
+    
+    width: 230px;
+}
+
+.putos{
+    display: flex;
+    flex-direction: column;
+   margin-right: -50px;
+}
+
+body{
+    background: rgb(251,251,251);
+background: linear-gradient(90deg, rgba(251,251,251,0.7147233893557423) 0%, rgba(73,125,245,0.14329481792717091) 0%, rgba(38,113,215,0.08727240896358546) 100%);
+}
+
+.modal-contenido{
+    width: 250px;
+    justify-content: center;
+    margin: -25px;
+    
+}
+
+    
+
+}
+
